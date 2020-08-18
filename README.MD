@@ -19,7 +19,7 @@ In my work I needed to concatenate almost 1 million of documents, one of my co-w
 - **inputFolder** : Absolute path where the files to be processed are located **Example: C:/go_files/input_path**
 - **outputPath** : Absolute path where the generated files are saved **Example: C:/go_files/output_path**
 - **docsCount** : Number of documents per output file **Example: 1000**
-- **outputPrefix** : Output file prefix **Example: PREFIX_** (app generate a random prefix with the extension you define)
+- **outputPrefix** : Output file prefix **Example: PREFIX_** (app generate a random sufix with the extension you define in **fileExtension**)
 - **fileExtension** : Output file extension **Example: txt**
 
 
