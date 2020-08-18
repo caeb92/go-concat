@@ -13,6 +13,9 @@ In my work I needed to concatenate almost 1 million of documents, one of my co-w
 - Intel Core i5 9300H
 - M.2 SSD disk
 
+## Logs
+
+The application shows logs in the terminal and also generates a log file called **go-concat.log**
 
 ## CLI arguments
 
