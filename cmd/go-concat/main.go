@@ -11,14 +11,14 @@ import (
 
 func main() {
 	// Read app CLI arguments
-	var inputFolder, outputPath, outputPrefix, fileExtesion string
+	var inputFolder, outputPath, outputPrefix, outputFileExtension string
 	var docsCount, c int
 
 	inputFolder = os.Args[1]
 	outputPath = os.Args[2]
 	docsCount, _ = strconv.Atoi(os.Args[3])
 	outputPrefix = os.Args[4]
-	fileExtesion = os.Args[4]
+	outputFileExtension = os.Args[5]
 
 	// Config logs
 	logFile, err := os.OpenFile("go-concat.log", os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0660)
@@ -31,7 +31,7 @@ func main() {
 
 	log.Println("PROCESS START")
 
-	if len(os.Args[1:]) != 4 {
+	if len(os.Args[1:]) != 5 {
 		log.Println("Some CLI arguments are missging")
 	}
 
@@ -43,7 +43,7 @@ func main() {
 
 	// Create the first output file
 	var outputAbosulePath string
-	outputAbosulePath = utils.CreateOutputFile(outputPath, outputPrefix, fileExtesion)
+	outputAbosulePath = utils.CreateOutputFile(outputPath, outputPrefix, outputFileExtension)
 
 	// Bytes buffer
 	b := new(bytes.Buffer)
@@ -51,7 +51,7 @@ func main() {
 		if c == docsCount {
 			c = 0
 			utils.WriteToFile(b.Bytes(), outputAbosulePath)
-			outputAbosulePath = utils.CreateOutputFile(outputPath, outputPrefix, fileExtesion)
+			outputAbosulePath = utils.CreateOutputFile(outputPath, outputPrefix, outputFileExtension)
 			b.Reset()
 		}
 		c++
