@@ -4,7 +4,7 @@
 
 ## Why I created this app 🤔
 
-In my work I needed to concatenate almost 1 million of documents, one of my co-workers made a java application that processes 4,000 documents (files that average 12kb-45kb) in 8 minutes, this application in Go takes only 4 seconds 😯.
+In my work I needed to concatenate almost 1 million of documents, we had a java application that processes 4,000 documents (files that average 12kb-45kb) in 8 minutes, this application in Go takes only 4 seconds 😯.
 
 ## Environment specs
 
